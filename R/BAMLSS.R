@@ -1,3 +1,13 @@
+smoothCon <- function(object,data,knots=NULL,absorb.cons=FALSE,
+                      scale.penalty=FALSE,n=nrow(data),dataX=NULL,
+                      null.space.penalty=FALSE,sparse.cons=0,
+                      diagonal.penalty=FALSE,apply.by=TRUE,modCon=0) {
+  mgcv::smoothCon(object,data,knots,absorb.cons,
+                  scale.penalty,n,dataX,
+                  null.space.penalty,sparse.cons,
+                  diagonal.penalty,apply.by,modCon)
+}
+
 ## Create a 'bamlss.frame'.
 bamlss.frame <- function(formula, data = NULL, family = "gaussian",
   weights = NULL, subset = NULL, offset = NULL, na.action = na.omit,
